@@ -1,8 +1,21 @@
-div {
+div, header, footer {
     border: 1px solid blue;
+    color: white;
+    text-align: center;
 }
-
+header, footer, .sidebar {
+    color: red;
+    height: 100px;
+    background-color: black;
+}
+.sidebar {
+    height: 308px;
+}
 .mapcell {
     float: left;
 
+}
+img {
+    height: 30px;
+    width: 30px;
 }

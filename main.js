@@ -13,6 +13,8 @@ var xy = [0,0];
 var i = 0;
 var j = 0;
 var n = 0;
+
+
 function buildMain() {
     for (i = 0; i < 12; i++) {
         mapCell = $("<div>");
@@ -20,6 +22,8 @@ function buildMain() {
         mapCell.addClass("mapcell col-md-1")
         mapCell.attr("coordinates",xy[i,j]);
         mapCell.attr("float","left");
+        mapCell.css("background-image",'url(https://tinyurl.com/y5q7gcap)');
+        mapCell.css("background-size",'contain');
         mapCell.text(xy);
         $("#mainMap"+n).append(mapCell);
         
@@ -28,7 +32,10 @@ function buildMain() {
     if (j < 11 && i == 12) {
         j++;
         n++;
-       $("#mainMap").removeAttr("float");
+        mapRow = $("<div>");
+        mapRow.addClass("row");
+        mapRow.attr("Id","mainMap"+n);
+        $("#cont").append(mapRow);
         i = 0;
         buildMain();
     }
